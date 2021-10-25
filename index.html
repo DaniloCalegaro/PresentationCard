@@ -27,41 +27,42 @@
         </div>
 
         <h1>Danilo Calegaro</h1>
-        <a href="https://github.com/DaniloCalegaro">
+        <a href="https://github.com/DaniloCalegaro" target="_blank">
           <img src="images/github.svg" alt="ícone github" />
           @danilocalegaro</a
         >
         <p>An instructor focused on helping pople start programming for web</p>
-        <ul>
-          <li>
-            <a href="https://www.youtube.com/">
-              <img
-                src="images/youtube.svg"
-                alt="ícone youtube"
-                target="_blank"
-              />
+        <ul id="socialLinks">
+          <li class="facebook">
+            <a href="" target="_blank">
+              <img src="images/facebook.svg" alt="ícone facebook" />
             </a>
           </li>
-          <li>
-            <a href="https://www.facebook.com/daniloc.sousa.9/">
-              <img
-                src="images/facebook.svg"
-                alt="ícone facebook"
-                target="_blank"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/danilocalegaro/">
-              <img
-                src="images/instagram.svg"
-                alt="ícone instagram"
-                target="_blank"
-              />
+          <li class="instagram">
+            <a href="" target="_blank">
+              <img src="images/instagram.svg" alt="ícone instagram" />
             </a>
           </li>
         </ul>
       </div>
     </main>
+
+    <script>
+      const LinksSocialMedia = {
+        github: 'DaniloCalegaro',
+        facebook: 'daniloc.sousa.9',
+        instagram: 'danilocalegaro'
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+          //alert(li.children[0].href)
+        }
+      }
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
