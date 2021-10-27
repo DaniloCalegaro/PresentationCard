@@ -98,9 +98,10 @@ ul {
 
 @media (min-width: 481px) {
   body {
+    background: url(images/background2.png) no-repeat;
     background-color: black;
   }
-
+  /*
   .lights {
     position: absolute;
     z-index: 0;
@@ -149,7 +150,7 @@ ul {
     height: 400px;
     animation: moveSide2 4s ease-in-out infinite alternate;
   }
-
+*/
   main {
     width: 22.3rem;
     height: 33.7rem;
